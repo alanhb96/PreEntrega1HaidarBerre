@@ -10,7 +10,7 @@ const NavBar = () => {
                 <ul>
                     <li><a href="#">By Genre</a></li>
                     <li><a href="#">By Artist</a></li>
-                    <li><a href="#"><Cart/></a></li>
+                    <li><a href="#"><Cart products='1'/></a></li>
                 </ul>
             </nav>
         </header>

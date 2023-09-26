@@ -1,6 +1,6 @@
-const ItemListContainer = ({props}) => {
+const ItemListContainer = ({userName}) => {
     return(
-        <h1>{props}</h1>
+        <h1>Bienvenido {userName}!</h1>
     )
 }
 

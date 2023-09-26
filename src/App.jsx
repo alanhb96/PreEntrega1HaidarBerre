@@ -7,7 +7,7 @@ const App = () =>{
   return (
     <>
       <NavBar/>
-      <ItemListContainer props="Bienvenido!"/>
+      <ItemListContainer userName="Alan"/>
     </>
   )
 }
