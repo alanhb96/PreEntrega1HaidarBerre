@@ -1,7 +1,10 @@
-const ItemListContainer = ({userName}) => {
+import ItemList from "./ItemList"
+
+const ItemListContainer = (props) => {
     return(
         <div className="mt-20">
-            <h1>Bienvenido {userName}!</h1>
+            <h1>Bienvenido {props.userName}!</h1>
+            <ItemList/>
         </div>
     )
 }
