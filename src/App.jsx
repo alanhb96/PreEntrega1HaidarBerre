@@ -1,8 +1,8 @@
-import { useState } from 'react'
 import NavBar from './components/NavBar'
+import Cart from './components/CartWidget'
 import ItemListContainer from './components/ItemListContainer'
-import ItemListContainer from './components/ItemDetailContainer'
-import { BrowserRouter, Routes } from 'react-router-dom'
+import ItemDetailContainer from './components/ItemDetailContainer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const App = () =>{
 
@@ -11,7 +11,9 @@ const App = () =>{
       <NavBar/>
       <Routes>
         <Route path='/' element = {<ItemListContainer userName="Alan"/>}/>
-        <Route path='/Detail' element = {<ItemDetailContainer/>}/>
+        <Route path='/detail/:id' element = {<ItemDetailContainer/>}/>
+        <Route path='/category/:category' element={<ItemListContainer userName="Alan"/>}/>
+        <Route path='/cart' element={<Cart/>}/>
       </Routes>
   </BrowserRouter>
   )

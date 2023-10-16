@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+	    "category": "vinyl",
+	    "title": "Melt My Eyez See Your Future - Denzel Curry", 
+        "album" : "Melt My Eyez See Your Future",
+        "artist" : "Denzel Curry",
+        "year": 2022,
+        "genre": "Rap, Hip Hop",
+        "price": 19000,
+        "description": "Groundbreaking album by Denzel Curry featuring a numerous of talented artists",
+        "image":"https://upload.wikimedia.org/wikipedia/en/c/cf/Denzel_Curry_-_Melt_My_Eyez_See_Your_Future.png"
+        
+    },
+    {
+        "id": 2,
+	    "category": "vinyl",
+	    "title": "Vince Staples - Vince Staples",
+        "album" : "Vince Staples",
+        "artist" : "Vince Staples",
+        "year": 2021,
+        "genre": "Rap, Hip Hop",
+        "price": 15000,
+        "description": "Vince Staples shapeshifting album redfining his style and new era of rap/hiphop",
+        "image":"https://upload.wikimedia.org/wikipedia/en/4/4e/Vince_Staples_self_titled.jpg"
+
+    },
+    {
+        "id": 3,
+	    "category": "accessories",
+	    "title":"Vinyl Record Player",
+        "price": 50000,
+        "description": "Vinyl Record Player Turntable with Built-in Bluetooth Receiver & 2 Stereo Speakers, 3 Speed 3 Size Portable Retro Record Player for Entertainment and Home Decoration",
+        "image":"https://m.media-amazon.com/images/I/61ijL6sQJrL._AC_SX425_.jpg"
+
+    },
+    {
+        "id": 4,
+	    "category": "accessories",
+	    "title":"Bookshelf Speakers",
+        "price": 75000,
+        "description": "1 BY ONE Bluetooth Bookshelf Speakers, Powered Speakers with 2-Way Active Crossover, 60 Watts RMS, 100 Watts Peak Power, Active Bookshelf Speakers with Bluetooth/RCA x 2/Coaxial/Optical",
+        "image":"https://m.media-amazon.com/images/I/81q6mjyBxVL._AC_SL1500_.jpg"
+
+    }
+
+]
