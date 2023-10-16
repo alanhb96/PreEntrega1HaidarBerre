@@ -17,8 +17,6 @@ import { useParams } from "react-router-dom"
     });
 
   },[]) 
-  
-  console.log(product)
 
   return (
     <div><ItemDetail product={product}/></div>

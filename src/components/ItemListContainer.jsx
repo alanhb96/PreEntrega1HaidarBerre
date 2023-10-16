@@ -7,18 +7,20 @@ const ItemListContainer = (props) => {
 
     const [products, setProducts] = useState([])
     const params = useParams()
-
+    
     useEffect(() => {
-        fetch('src/products.json')
+
+        fetch('/src/products.json')
             .then((response) => response.json())
             .then(data =>{
                 if(params.category){
-                    setProducts(data.filter(p => p.category === params.category))
+                    const filteredProducts = data.filter(p => p.category === params.category)
+                    setProducts(filteredProducts)
                 }else{setProducts(data)}
             })
             /* .then(data => setProducts(data)) */
             .catch((error) => error)
-    },[products]) 
+    },[params.category]) 
 
     return(
         <div className="mt-20">

@@ -10,9 +10,9 @@ const App = () =>{
   <BrowserRouter>
       <NavBar/>
       <Routes>
-        <Route path='/' element = {<ItemListContainer userName="Alan"/>}/>
-        <Route path='/detail/:id' element = {<ItemDetailContainer/>}/>
+        <Route path='/' element={<ItemListContainer userName="Alan"/>}/>
         <Route path='/category/:category' element={<ItemListContainer userName="Alan"/>}/>
+        <Route path='/detail/:id' element = {<ItemDetailContainer/>}/>
         <Route path='/cart' element={<Cart/>}/>
       </Routes>
   </BrowserRouter>
