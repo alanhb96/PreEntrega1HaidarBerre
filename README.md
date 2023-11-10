@@ -16,14 +16,14 @@ Las dependencias usadas son:
 
 Para poder hacer uso de esta aplicacion es necesario primero hacre un proyecto en visualStudioCode y tener instalado nodeJS para poder instalar por consola lo siguiente: 
 
-    ```bash
+    ```
     > npm create vite@latest
     ```
 Luego dar enter y darle nombre al proyecto, confirmar con enter nuevamente. De no tener instalado vite, se instalara y demorara unos segundos/minutos.
 Siguiente es elegir el framework que usaremos, en este caso 'React' y variante 'JavaScript'
 Por ultimo escribir lo siguiente por consola: 
 
-    ```bash
+    ```
     > cd *nombreDelProyecto*
     > npm install
     > npm run dev
