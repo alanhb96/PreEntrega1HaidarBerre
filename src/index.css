@@ -19,3 +19,16 @@ body,
   flex-direction: column;
 }
 
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+  display: block;
+}
+
+.nav-link:hover {
+  background-color: #f0f0f0;
+  color: #0077cc;
+}

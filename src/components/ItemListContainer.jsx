@@ -1,7 +1,8 @@
 import ItemList from "./ItemList"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-
+import { app } from '../firebaseConfig'
+import { getFirestore, collection, getDocs, query, where} from 'firebase/firestore'
 
 const ItemListContainer = (props) => {
 
@@ -9,17 +10,37 @@ const ItemListContainer = (props) => {
     const params = useParams()
     
     useEffect(() => {
+        const db = getFirestore(app)
+        const productsCollection = collection(db,"products")
 
-        fetch('/src/products.json')
-            .then((response) => response.json())
-            .then(data =>{
-                if(params.category){
-                    const filteredProducts = data.filter(p => p.category === params.category)
-                    setProducts(filteredProducts)
-                }else{setProducts(data)}
+        if(params.category){
+            const filter = query(productsCollection, where("category","==",params.category))
+            const filtereRequest = getDocs(filter)
+            filtereRequest.then((res) => {
+                const productsFirebase = res.docs.map(doc => {
+                    const id = doc.id
+                    const data = doc.data()
+                    data.id = id
+                    return data
+                    })
+                setProducts(productsFirebase)
+            }).catch((err) => {
+                console.log(err)
             })
-            /* .then(data => setProducts(data)) */
-            .catch((error) => error)
+        }else{
+            const request = getDocs(productsCollection)
+            request.then((res) => {
+                    const productsFirebase = res.docs.map(doc => {
+                    const id = doc.id
+                    const data = doc.data()
+                    data.id = id
+                    return data
+                })
+            setProducts(productsFirebase)
+            }).catch((err) => {
+                console.log(err)
+            })
+        }
     },[params.category]) 
 
     return(
